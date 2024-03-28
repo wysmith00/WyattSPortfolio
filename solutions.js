@@ -27,3 +27,9 @@ function displayCurrentYear() {
 window.onload = function() {
     displayCurrentYear();
 };
+
+window.offload = function() {
+    displayCurrentTime();
+}
+
+
