@@ -28,8 +28,5 @@ window.onload = function() {
     displayCurrentYear();
 };
 
-window.offload = function() {
-    displayCurrentTime();
-}
 
 
