@@ -1,53 +1,50 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+/* Applying a consistent background color across the entire page */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;  /* Ensuring the body takes full viewport height */
+  background-color: #f4f4f4;  /* Light grey background for the whole page */
+  font-family: Arial, sans-serif;  /* General font for the body */
 }
 
+/* Styling the header to center content */
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
+  display: flex;  /* Using flexbox to center content */
+  flex-direction: column;  /* Aligning children elements vertically */
+  justify-content: center;  /* Center vertically */
+  align-items: center;  /* Center horizontally */
+  height: 150px;  /* Setting a fixed height for the header */
+  width: 100%;  /* Ensuring it spans the full width of the page */
+  background-color: #f4f4f4;  /* Matching the body's background color */
+  text-align: center;  /* Centering text for any text element inside the header */
 }
 
-header h1 {
-    margin: 0;
+/* Styling the social links */
+.social-links {
+  font-size: 14px;  /* Smaller font size for the links */
+  margin-top: 10px;  /* Space between title and links */
+  display: flex;  /* Using flexbox for alignment */
+  justify-content: center;  /* Centering links horizontally */
 }
 
-#projects {
-    padding: 20px;
+.social-links a, .social-links span {
+  text-decoration: none;  /* Removing underline from links */
+  color: #333;  /* Dark grey color for readability */
+  margin: 0 5px;  /* Spacing around links */
 }
 
-.project {
-    background-color: #f4f4f4;
-    margin-bottom: 20px;
-    padding: 10px;
+/* Styling the About section with a gold border */
+#about {
+  padding: 20px;
+  text-align: center;  /* Centering the text */
+  background-color: #fff;  /* White background for contrast */
+  font-size: 16px;  /* Adjust as needed */
+  line-height: 1.6;  /* For better readability */
+  border: 2px solid gold;  /* Gold border around the section */
+  margin: 30px;  /* Providing some space around the section */
+  box-shadow: 0px 0px 10px gold;  /* Optional: Adding a subtle gold shadow for extra flair */
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-.dark-theme {
-    background-color: #333;
-    color: white;
-}
-
-.dark-theme header {
-    background-color: #222;
-}
-
-.dark-theme .project {
-    background-color: #444;
-}
-
-.dark-theme footer {
-    background-color: #222;
+h1, h2 {
+  font-family: Arial, sans-serif;  /* Consistent header fonts */
 }
