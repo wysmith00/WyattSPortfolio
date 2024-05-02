@@ -23,5 +23,40 @@
         <p>My career is marked by a tenacity that motivates me to persist through challenges and a focus that ensures the quality and precision of my work. Whether I'm debugging software or designing user interfaces, my goal is always to enhance functionality and user experience.</p>
         <p>I thrive on continuous learning and am always on the lookout for new technologies and techniques that can drive innovation in software engineering. If you're looking for someone who is not only skilled in coding but also committed to pushing the boundaries of what is possible with modern software, let's connect!</p>
     </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Inline Script for Form Submission -->
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+    
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value
+        };
+    
+        fetch('/submit-form', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        })
+        .then(response => response.json())
+        .then(data => alert('Form submitted successfully'))
+        .catch(error => console.error('Error:', error));
+    });
+    </script>
 </body>
 </html>
